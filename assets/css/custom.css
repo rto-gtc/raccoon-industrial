@@ -1,0 +1,314 @@
+  /* Globalna czcionka dla reszty strony */
+  body, h1, h2, h3, h4, h5, h6, p, a, span, div {
+    font-family: "Roboto", Arial, sans-serif;
+  }
+
+  /* Specyficzne style dla sekcji hero – przypisanie czcionki "Arial Black" */
+  #hero .hero-content {
+    font-family: "Arial Black", Arial, sans-serif;
+  }
+
+  /* Krytyczny inline CSS (minimum dla widocznych sekcji, np. hero) */
+  .hero-content h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+  }
+  .hero-content p {
+    font-size: 1.5rem;
+    color: #ddd;
+  }
+  .btn-get-started {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  /* Media query – zmniejszenie rozmiarów czcionki w sekcji hero na ekranach mobilnych */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 3rem;
+    }
+    .hero-content p {
+      font-size: 1.25rem;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  #achievements {
+    background-color: #f9f9f9; /* Opcjonalnie jasne tło */
+  }
+
+  /* Nagłówek h3 w sekcji */
+  .achievements-title {
+    color: orange; 
+    font-weight: 700;
+  }
+
+  /* Obrazy w kaflach 
+     - obiekty mają ustalony rozmiar (400x300) przy pomocy CSS
+  */
+  .achievements-img {
+    width: 100%;
+    height: 225px;         /* Ustalona wysokość; dostosuj wedle potrzeb */
+    object-fit: cover;     /* Przycinanie przy zachowaniu proporcji */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  /* Karty */
+  #achievements .card {
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  #achievements .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Ciemniejsze zdjęcie przy najechaniu */
+  #achievements .card:hover .achievements-img {
+    opacity: 0.9;
+  }
+
+  /* Tytuł i tekst w kartach */
+  #achievements .card-title {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+  #achievements .card-text {
+    font-size: 0.95rem;
+    color: #555;
+  }
+
+
+
+
+  .service-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px; /* Zaokrąglone rogi */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+ 
+
+  .service-item .img {
+    position: relative;
+    height: 250px; /* Stała wysokość obrazu */
+    overflow: hidden;
+  }
+
+  .service-item .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6); /* Przezroczyste tło */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+  }
+
+  .service-item:hover .info {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .service-item .info h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    transition: color 0.3s ease;
+  }
+
+  .service-item .info p {
+    font-size: 1rem;
+    margin: 10px 0;
+    opacity: 0.8;
+  }
+
+  .service-item .info a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #ff9800;
+    margin-top: 10px;
+    display: inline-block;
+    transition: color 0.3s ease;
+  }
+
+  .service-item .info a:hover {
+    color: #fff;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+/* Stylizacja sekcji z kartami - przyjmuję, że nadałeś sekcji lub kontenerowi ID #industrial-cards */
+#industrial-cards {
+  padding: 60px 0;
+  background-color: #f9f9f9; /* Jasne tło sekcji */
+}
+
+/* Ogólne style kart */
+#industrial-cards .card {
+  border: none; /* Usunięcie ramki karty */
+  border-radius: 10px; /* Zaokrąglone rogi */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Lekki cień i "podniesienie" karty po najechaniu */
+#industrial-cards .card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+/* Ikony w kartach */
+#industrial-cards .card-body i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Nagłówek karty */
+#industrial-cards .card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+/* Tekst opisu karty */
+#industrial-cards .card-text {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Przyciski w kartach */
+#industrial-cards .card-body button.btn {
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+}
+
+/* Styl dla collapse wewnątrz kart - wyrównanie do lewej */
+#industrial-cards .collapse {
+  text-align: left;
+  margin-top: 0.75rem;
+}
+
+/* Dodatkowe poprawki responsywne (opcjonalnie) */
+@media (max-width: 768px) {
+  #industrial-cards .card-body i {
+    font-size: 2.5rem;
+  }
+  #industrial-cards .card-title {
+    font-size: 1.1rem;
+  }
+}
+
+
+
+
+
+/* Stylizacja przycisku */
+button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Stylizacja komunikatu o błędzie i powodzeniu */
+.error-message, .sent-message {
+  display: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.sent-message {
+  background-color: #d4edda;
+  color: #155724;
+}
+/* Stylizacja komunikatu 'Loading' */
+.loading {
+  display: none; /* Ukrywamy 'Loading' na początku */
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ffc107; /* Kolor tła - żółty */
+  color: #212529; /* Kolor tekstu - ciemny */
+  text-align: center;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Stylizacja komunikatu o błędzie */
+.error-message, .sent-message {
+  display: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.sent-message {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+

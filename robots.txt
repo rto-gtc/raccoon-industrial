@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+Sitemap: https://raccoon24.pl/sitemap.xml
+
